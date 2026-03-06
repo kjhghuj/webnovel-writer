@@ -11,9 +11,10 @@ import os
 import sys
 import webbrowser
 from pathlib import Path
+from typing import Optional
 
 
-def _resolve_project_root(cli_root: str | None) -> Path:
+def _resolve_project_root(cli_root: Optional[str]) -> Path:
     """按优先级解析 PROJECT_ROOT：CLI > 环境变量 > .claude 指针 > CWD。"""
     if cli_root:
         return Path(cli_root).resolve()
