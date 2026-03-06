@@ -9,7 +9,7 @@ import asyncio
 import json
 import time
 from pathlib import Path
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Optional, List
 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler, FileModifiedEvent, FileCreatedEvent
@@ -41,9 +41,9 @@ class FileWatcher:
     """管理 watchdog Observer 和 SSE 客户端订阅。"""
 
     def __init__(self):
-        self._observer: Observer | None = None
-        self._subscribers: list[asyncio.Queue] = []
-        self._loop: asyncio.AbstractEventLoop | None = None
+        self._observer: Optional[Observer] = None
+        self._subscribers: List[asyncio.Queue] = []
+        self._loop: Optional[asyncio.AbstractEventLoop] = None
 
     # --- 订阅管理 ---
 
@@ -67,7 +67,7 @@ class FileWatcher:
             self._loop.call_soon_threadsafe(self._dispatch, msg)
 
     def _dispatch(self, msg: str):
-        dead: list[asyncio.Queue] = []
+        dead: List[asyncio.Queue] = []
         for q in self._subscribers:
             try:
                 q.put_nowait(msg)

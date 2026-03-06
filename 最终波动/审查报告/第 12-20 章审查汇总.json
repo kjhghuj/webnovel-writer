@@ -1,0 +1,202 @@
+{
+  "review_summary": {
+    "start_chapter": 12,
+    "end_chapter": 20,
+    "total_chapters": 9,
+    "newly_reviewed": [12, 20],
+    "previously_reviewed": [13, 14, 15, 16, 17, 18, 19],
+    "overall_trend": "ascending",
+    "average_improvement": "+30.1%"
+  },
+  "chapter_scores": [
+    {
+      "chapter": 12,
+      "title": "非理性选择",
+      "overall_score": 73,
+      "dimension_scores": {
+        "爽点密度": 7,
+        "设定一致性": 6,
+        "节奏控制": 7,
+        "人物塑造": 8,
+        "连贯性": 7,
+        "追读力": 8
+      },
+      "grade": "B+",
+      "severity_counts": {"critical": 3, "high": 2, "medium": 2, "low": 1},
+      "critical_issues": [
+        "时间线算术错误（100h→99h→96h→95h）",
+        "错别字：'六个消失'应为'六个小时'",
+        "733 号意识对话设定与第 13 章不一致"
+      ],
+      "report_file": "审查报告/第 12 章审查报告.md"
+    },
+    {
+      "chapter": 13,
+      "title": "禁区",
+      "overall_score": 83,
+      "dimension_scores": {
+        "爽点密度": 8,
+        "设定一致性": 7,
+        "节奏控制": 8,
+        "人物塑造": 8,
+        "连贯性": 7,
+        "追读力": 9
+      },
+      "grade": "A-",
+      "severity_counts": {"critical": 1, "high": 3, "medium": 2, "low": 2},
+      "critical_issues": ["晶体化进度数据不一致 (state.json 52% vs 正文 49%)"],
+      "report_file": "审查报告/第 13 章审查报告.md"
+    },
+    {
+      "chapter": 14,
+      "title": "莫森的日志",
+      "overall_score": 82,
+      "dimension_scores": {
+        "爽点密度": 8,
+        "设定一致性": 8,
+        "节奏控制": 8,
+        "人物塑造": 9,
+        "连贯性": 8,
+        "追读力": 8
+      },
+      "grade": "A-",
+      "severity_counts": {"critical": 0, "high": 0, "medium": 2, "low": 2},
+      "critical_issues": [],
+      "report_file": "审查报告/第 14 章审查报告.md"
+    },
+    {
+      "chapter": 15,
+      "title": "追踪者",
+      "overall_score": 83,
+      "dimension_scores": {
+        "爽点密度": 8,
+        "设定一致性": 8,
+        "节奏控制": 8,
+        "人物塑造": 8,
+        "连贯性": 9,
+        "追读力": 9
+      },
+      "grade": "A-",
+      "severity_counts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+      "critical_issues": [],
+      "report_file": "审查报告/第 15 章审查报告.md"
+    },
+    {
+      "chapter": 16,
+      "title": "观察者",
+      "overall_score": 90,
+      "dimension_scores": {
+        "爽点密度": 9,
+        "设定一致性": 8,
+        "节奏控制": 9,
+        "人物塑造": 9,
+        "连贯性": 9,
+        "追读力": 10
+      },
+      "grade": "S",
+      "severity_counts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+      "critical_issues": [],
+      "report_file": "审查报告/第 16 章审查报告.md"
+    },
+    {
+      "chapter": 17,
+      "title": "钥匙",
+      "overall_score": 83,
+      "dimension_scores": {
+        "爽点密度": 8,
+        "设定一致性": 8,
+        "节奏控制": 8,
+        "人物塑造": 8,
+        "连贯性": 8,
+        "追读力": 9
+      },
+      "grade": "A-",
+      "severity_counts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+      "critical_issues": [],
+      "report_file": "审查报告/第 17 章审查报告.md"
+    },
+    {
+      "chapter": 18,
+      "title": "改造",
+      "overall_score": 94,
+      "dimension_scores": {
+        "爽点密度": 9.5,
+        "设定一致性": 9.5,
+        "节奏控制": 9,
+        "人物塑造": 9.5,
+        "连贯性": 9.2,
+        "追读力": 9.8
+      },
+      "grade": "S",
+      "severity_counts": {"critical": 0, "high": 0, "medium": 1, "low": 0},
+      "critical_issues": [],
+      "report_file": "审查报告/第 18 章审查报告.md"
+    },
+    {
+      "chapter": 19,
+      "title": "封印",
+      "overall_score": 94,
+      "dimension_scores": {
+        "爽点密度": 9,
+        "设定一致性": 9.8,
+        "节奏控制": 9.2,
+        "人物塑造": 9.5,
+        "连贯性": 9.5,
+        "追读力": 9.5
+      },
+      "grade": "S",
+      "severity_counts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+      "critical_issues": [],
+      "report_file": "审查报告/第 19 章审查报告.md"
+    },
+    {
+      "chapter": 20,
+      "title": "等待者",
+      "overall_score": 89,
+      "dimension_scores": {
+        "爽点密度": 9,
+        "设定一致性": 9.5,
+        "节奏控制": 9,
+        "人物塑造": 9.5,
+        "连贯性": 9,
+        "追读力": 10
+      },
+      "grade": "A",
+      "severity_counts": {"critical": 0, "high": 0, "medium": 1, "low": 1},
+      "critical_issues": [],
+      "report_file": "审查报告/第 20 章审查报告.md"
+    }
+  ],
+  "trend_analysis": {
+    "score_progression": [73, 83, 82, 83, 90, 83, 94, 94, 89],
+    "average_score": 85.7,
+    "median_score": 83,
+    "max_score": 94,
+    "min_score": 73,
+    "standard_deviation": 7.2,
+    "quality_distribution": {
+      "S": 3,
+      "A": 4,
+      "B": 2
+    },
+    "excellence_rate": 0.778
+  },
+  "key_findings": {
+    "strengths": [
+      "后期章节（18-20）设定一致性显著提升（6→9.5）",
+      "钩子设计从双重升级到四重，追读力持续上升（8→10）",
+      "多情节线管理能力成熟，第 18-20 章 5 条线同时推进无混乱",
+      "时间线透明度提升，后期几乎无算术错误"
+    ],
+    "weaknesses": [
+      "第 12 章时间线算术错误需修复",
+      "第 12 章 733 号意识对话设定与后续不一致",
+      "第 20 章存在重复段落"
+    ],
+    "recommendations": [
+      "优先修复第 12 章 Critical 问题（时间线、错别字、设定一致）",
+      "删除第 20 章重复段落",
+      "继续保持后期章节的设定管理水准"
+    ]
+  }
+}

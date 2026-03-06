@@ -9,7 +9,7 @@ import json
 import sqlite3
 from contextlib import asynccontextmanager, closing
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union, List, Dict
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
@@ -22,7 +22,7 @@ from .watcher import FileWatcher
 # ---------------------------------------------------------------------------
 # 全局状态
 # ---------------------------------------------------------------------------
-_project_root: Path | None = None
+_project_root: Optional[Path] = None
 _watcher = FileWatcher()
 
 STATIC_DIR = Path(__file__).parent / "frontend" / "dist"
@@ -42,7 +42,7 @@ def _webnovel_dir() -> Path:
 # 应用工厂
 # ---------------------------------------------------------------------------
 
-def create_app(project_root: str | Path | None = None) -> FastAPI:
+def create_app(project_root: Optional[Union[str, Path]] = None) -> FastAPI:
     global _project_root
 
     if project_root:
@@ -91,7 +91,7 @@ def create_app(project_root: str | Path | None = None) -> FastAPI:
         conn.row_factory = sqlite3.Row
         return conn
 
-    def _fetchall_safe(conn: sqlite3.Connection, query: str, params: tuple = ()) -> list[dict]:
+    def _fetchall_safe(conn: sqlite3.Connection, query: str, params: tuple = ()) -> List[Dict]:
         """执行只读查询；若目标表不存在（旧库），返回空列表。"""
         try:
             rows = conn.execute(query, params).fetchall()
@@ -110,7 +110,7 @@ def create_app(project_root: str | Path | None = None) -> FastAPI:
         with closing(_get_db()) as conn:
             q = "SELECT * FROM entities"
             params: list = []
-            clauses: list[str] = []
+            clauses: List[str] = []
             if entity_type:
                 clauses.append("type = ?")
                 params.append(entity_type)
@@ -155,7 +155,7 @@ def create_app(project_root: str | Path | None = None) -> FastAPI:
         with closing(_get_db()) as conn:
             q = "SELECT * FROM relationship_events"
             params: list = []
-            clauses: list[str] = []
+            clauses: List[str] = []
             if entity:
                 clauses.append("(from_entity = ? OR to_entity = ?)")
                 params.extend([entity, entity])
@@ -425,7 +425,7 @@ def create_app(project_root: str | Path | None = None) -> FastAPI:
 # 辅助函数
 # ---------------------------------------------------------------------------
 
-def _walk_tree(folder: Path, root: Path) -> list[dict]:
+def _walk_tree(folder: Path, root: Path) -> List[Dict]:
     items = []
     for child in sorted(folder.iterdir()):
         rel = str(child.relative_to(root)).replace("\\", "/")
